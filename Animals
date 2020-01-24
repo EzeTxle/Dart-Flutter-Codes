@@ -1,0 +1,55 @@
+void main(){
+  
+  
+  
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+abstract class Animal{ }
+abstract class Mamifero extends Animal{ }
+abstract class Ave extends Animal{ }
+abstract class Pez extends Animal{ }
+abstract class Volador {
+  void volar()=> print ("Vuelo!!!");
+}
+abstract class Caminante {
+  void caminar()=> print ("Camino!!!");
+}
+abstract class Nadador {
+  void nadar()=> print ("Nado!!!");
+}
+class Perro extends Mamifero with Nadador, Caminante{}
+class Murcielago extends Mamifero with Caminante, Volador{}
+class Ornitorrinco extends Mamifero with Caminante, Nadador{}
+class Gallina extends Ave with Caminante{}
+class Pato extends Ave with Volador, Caminante, Nadador{}
+class VencejoComun extends Ave with Volador{}
+class Tiburon extends Pez with Nadador{}
+class PezVolador extends Pez with Nadador
