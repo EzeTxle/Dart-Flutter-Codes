@@ -1,0 +1,34 @@
+void main(){
+final batman = new Hero();
+batman.name    = "Bruce Wayne";
+batman.power   =           730;
+batman.valentia=           300; 
+final joker  = new Villian(); 
+joker.name      = "Jack Napier";
+joker.power     =           430;
+joker.crazziness=	          "∞";
+
+print      ("Batman:");
+print    (batman.name);
+print   (batman.power);
+print(batman.valentia); 
+print        ("Joker:");
+print      (joker.name);
+print     (joker.power);
+print(joker.crazziness);  
+
+}
+abstract class Basic{
+ String name;
+ int power;
+}
+class Hero extends Basic{
+  
+  
+ int valentia;
+ 
+ 
+}
+class Villian extends Basic{
+  String crazziness;
+}
