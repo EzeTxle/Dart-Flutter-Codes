@@ -1,0 +1,31 @@
+import 'dart:convert';
+void main(){
+ //final wolverine = new Hero('Wolverine', 'Logan', 180)  
+  final rawJson = '{ "supername": "Wolverine", "name": "Logan", "power": 180}';
+  final parsedJson= json.decode( rawJson );
+  final wolverine = new Hero.fromJson( parsedJson );
+ print(wolverine.supername  );
+ print(wolverine.name);
+ print(wolverine.power);
+  //print(parsedJson);
+   //print (wolverine);
+}
+class Hero {
+  String supername;
+  String name;
+  int power;
+//  Hero (String supername, String name, int power){
+   //this.supername =supername;
+   //this.name= name;
+   //this.power= power;
+  //}
+// String toString(){
+  // return '${this.supername}: real name:${this.name} - power:${this.power}'; 
+ //}
+ Hero(this.supername, this.name, this.power);
+ Hero.fromJson( parsedJson ){
+  supername = parsedJson['supername'];
+  name      = parsedJson['name']; 
+  power     = parsedJson['power'];  
+ }
+}
